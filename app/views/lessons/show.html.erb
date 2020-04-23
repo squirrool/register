@@ -1,0 +1,42 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @lesson.date %>
+</p>
+
+<p>
+  <strong>Hours:</strong>
+  <%= @lesson.hours %>
+</p>
+
+<p>
+  <strong>Materials:</strong>
+  <%= @lesson.materials %>
+</p>
+
+<p>
+  <strong>Areas:</strong>
+  <%= @lesson.areas %>
+</p>
+
+<p>
+  <strong>Homework:</strong>
+  <%= @lesson.homework %>
+</p>
+
+<p>
+  <strong>Group:</strong>
+  <%= @lesson.group.name %>
+</p>
+
+<p>
+  <strong>Studenti:</strong>
+  <% @presenti.each do |f| %>
+    <%= f.name %>
+    <%= f.lastname %>
+  <% end %>
+</p>
+
+<%= link_to 'Edit', edit_lesson_path(@lesson) %> |
+<%= link_to 'Back', lessons_path %>
