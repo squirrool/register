@@ -61,7 +61,7 @@
         <li class="collection-header"><h4>Students</h4></li>
         <li class="collection-item">
           <div class="field">
-          <%= form.collection_check_boxes(:student_id, Student.all, :id, :name) do |b| %>
+          <%= form.collection_check_boxes(:student_id, Student.where(:group_id => group_id), :id, :name) do |b| %>
             <%= b.label class:"label-checkbox" do%>
             <%=b.check_box%>
             <span><%= b.text %></span><br>
