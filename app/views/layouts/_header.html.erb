@@ -6,6 +6,9 @@
       	<li><%= link_to "Classes", groups_path %></li>
         <li><%= link_to "New class", new_group_path %></li>
         <li><%= link_to "New Student", new_student_path %></li>
+        <% if user_signed_in? %>
+        <li><%= link_to('Logout', destroy_user_session_path, method: :delete) %></li> 
+        <% end %>
       </ul>
     </div>
   </nav>
