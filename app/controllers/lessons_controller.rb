@@ -22,6 +22,7 @@ class LessonsController < ApplicationController
 
   # GET /lessons/1/edit
   def edit
+    @group_id = @lesson.group 
   end
 
   # POST /lessons
