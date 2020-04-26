@@ -11,7 +11,7 @@
     "materialize-js": "^1.0.0",
     "turbolinks": "^5.2.0"
   },
-  "version": "0.1.0",
+  "version": "v1.19.1",
   "devDependencies": {
     "webpack-dev-server": "^3.10.3"
   }
