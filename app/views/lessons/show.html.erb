@@ -1,42 +1,43 @@
-<p id="notice"><%= notice %></p>
+<div class="row">
+  <ul class="collection with-header">
+    <li class="collection-header"><h5>Lesson Data</h5></li>
+    <li class="collection-item">Group: <%= @lesson.group.name %></li>
+    <li class="collection-item">Date: <%= @lesson.date.strftime("%d %m %Y") %></li>
+    <li class="collection-item">Hours:   <%= @lesson.hours %></li>
+  </ul>
+</div>
 
-<p>
-  <strong>Date:</strong>
-  <%= @lesson.date %>
-</p>
+<div class="row">
+  <ul class="collection with-header">
+    <li class="collection-header"><h5>Present students</h5></li>
+    <% @presenti.each do |f| %>
+      <li class="collection-item"><%= f.name %> <%= f.lastname %></li>
+    <% end %>
+  </ul>
+</div>
 
-<p>
-  <strong>Hours:</strong>
-  <%= @lesson.hours %>
-</p>
+<div class="row">
+  <ul class="collection with-header">
+    <li class="collection-header"><h5>Materials Used</h5></li>
+      <li class="collection-item">
+       <%= @lesson.materials %> 
+      </li>
+  </ul>
+</div>
 
-<p>
-  <strong>Materials:</strong>
-  <%= @lesson.materials %>
-</p>
+<div class="row">
+  <ul class="collection with-header">
+    <li class="collection-header"><h5>Topic</h5></li>
+      <li class="collection-item"><%= @lesson.areas %></li>
+  </ul>
+</div>
 
-<p>
-  <strong>Areas:</strong>
-  <%= @lesson.areas %>
-</p>
 
-<p>
-  <strong>Homework:</strong>
-  <%= @lesson.homework %>
-</p>
+<div class="row">
+  <ul class="collection with-header">
+    <li class="collection-header"><h5>Assigned Homework</h5></li>
+      <li class="collection-item"><%= @lesson.homework %></li>
+  </ul>
+</div>
 
-<p>
-  <strong>Group:</strong>
-  <%= @lesson.group.name %>
-</p>
-
-<p>
-  <strong>Studenti:</strong>
-  <% @presenti.each do |f| %>
-    <%= f.name %>
-    <%= f.lastname %>
-  <% end %>
-</p>
-
-<%= link_to 'Edit', edit_lesson_path(@lesson) %> |
-<%= link_to 'Back', lessons_path %>
+<%= link_to "Back", groups_path%>

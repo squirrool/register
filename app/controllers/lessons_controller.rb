@@ -33,7 +33,7 @@ class LessonsController < ApplicationController
     @group_id = params[:group_id]
     respond_to do |format|
       if @lesson.save
-        format.html { redirect_to @lesson.group, notice: 'Lesson was successfully created.' }
+        format.html { redirect_to @lesson, notice: 'Lesson was successfully created.' }
         format.json { render :show, status: :created, location: @lesson }
       else
         format.html { render :new }

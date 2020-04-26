@@ -35,7 +35,7 @@
         <tbody>
     		<% @group.lessons.each do |l| %>
           <tr>
-            <td><%= l.date %></td>
+            <td><%= l.date.strftime("%d %m") %></td>
             <td><%= l.materials %></td>
             <td><%= l.areas %></td>
           </tr>
