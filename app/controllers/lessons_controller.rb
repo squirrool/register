@@ -22,7 +22,8 @@ class LessonsController < ApplicationController
 
   # GET /lessons/1/edit
   def edit
-    @group_id = @lesson.group 
+    @group_id = @lesson.group_id
+    @students = Student.where(:group_id => @group_id) 
   end
 
   # POST /lessons
