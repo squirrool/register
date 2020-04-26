@@ -22,30 +22,25 @@
 	</div>
 	<div class="col s9">
 	<ul class="collection with-header">
-    <li class="collection-header"><h5>Lessons</h5></li>
+    <li class="collection-header right"><%= link_to "new lesson", new_lesson_path(group_id:@group.id), class: "btn" %></li>
 	</ul>
-	<table>
-        <thead>
-          <tr>
-              <th>Date</th>
-              <th>Materials used</th>
-              <th>Topic</th>
-          </tr>
-        </thead>
-        <tbody>
-    		<% @group.lessons.each do |l| %>
-          <tr>
-            <td><%= link_to l.date.strftime("%d\%m"), lesson_path(id: l.group.id) %></td>
-            <td><%= l.materials %></td>
-            <td><%= l.areas %></td>
-          </tr>
-      	</tbody>
-      	<tbody>
-      	<% end %>
-          <tr>
-          	<td></td><td><%= link_to "new lesson", new_lesson_path(group_id:@group.id) %></td><td></td>
-          </tr>
-        </tbody>
-      </table>
+    <table>
+      <thead>
+        <tr>
+            <th>Date</th>
+            <th>Materials used</th>
+            <th>Topic</th>
+        </tr>
+      </thead>
+      <tbody>
+  		<% @group.lessons.each do |l| %>
+        <tr>
+          <td><%= link_to l.date.strftime("%d/%m"), lesson_path(id: l.group.id) %></td>
+          <td><%= l.materials %></td>
+          <td><%= l.areas %></td>
+        </tr>
+    	</tbody>
+    	<% end %>
+    </table>
 	</div>
 </div>

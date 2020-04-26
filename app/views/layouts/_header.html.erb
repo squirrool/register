@@ -3,8 +3,8 @@
     <div class="container nav-wrapper">
       <a href="#" class="brand-logo">Register</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-      	<li><%= link_to "Classes", groups_path %></li>
-        <li><%= link_to "New class", new_group_path %></li>
+      	<li><%= link_to "Groups", groups_path %></li>
+        <li><%= link_to "New group", new_group_path %></li>
         <li><%= link_to "New Student", new_student_path %></li>
         <% if user_signed_in? %>
         <li><%= link_to('Logout', destroy_user_session_path, method: :delete) %></li> 
