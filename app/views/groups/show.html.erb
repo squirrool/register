@@ -35,7 +35,7 @@
         <tbody>
     		<% @group.lessons.each do |l| %>
           <tr>
-            <td><%= l.date.strftime("%d %m") %></td>
+            <td><%= link_to l.date.strftime("%d\%m"), lesson_path(id: l.group.id) %></td>
             <td><%= l.materials %></td>
             <td><%= l.areas %></td>
           </tr>
